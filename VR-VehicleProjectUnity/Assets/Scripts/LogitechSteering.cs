@@ -13,6 +13,7 @@ public class LogitechSteering : MonoBehaviour
     void Start()
     {
         print(LogitechGSDK.LogiSteeringInitialize(false));
+
     }
 
     // Update is called once per frame
