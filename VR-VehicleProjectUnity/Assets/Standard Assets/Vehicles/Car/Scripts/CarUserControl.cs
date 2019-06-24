@@ -11,6 +11,7 @@ namespace UnityStandardAssets.Vehicles.Car
         private CarController m_Car; // the car controller we want to use
         public float gas;
         public float breakk;
+        public Boolean keyboard;
 
         private void Awake()
         {
@@ -30,8 +31,14 @@ namespace UnityStandardAssets.Vehicles.Car
 
             //if (-(f + 1) < 0) { m_Car.Move(h, v, 0, 0); }
 
-               m_Car.Move(h, v, -(f + 1), 0);
-           // m_Car.Move(h, v, v, 0);
+            if (keyboard == false)
+            {
+                m_Car.Move(h, v, -(f + 1), 0);
+            }
+            else {
+                m_Car.Move(h, v, v, 0);
+            }
+           
             //   Debug.Log("PedalG:" + v);
             Debug.Log("Pedal:" + f);
             breakk = f;

@@ -10,6 +10,10 @@ public class RotateSteeringWheel : MonoBehaviour
     public float xAxis, xPedal, yPedal, zPedal, GasInput;
     public float xAxisDegree;
 
+    public int damperForce = 40;
+    public int constantForcee, bumpyRoadEffect, dirtRoadEffect, frontalCollisionForce, sideCollisionForce, slipperyRoadEffect;
+    public bool carAirborne;
+
     void Start()
     {
         Debug.Log("SteeringInit:" + LogitechGSDK.LogiSteeringInitialize(false));
@@ -37,10 +41,16 @@ public class RotateSteeringWheel : MonoBehaviour
             //transform.rotation = Quaternion.Euler(0, 0, xAxisDegree);
             transform.localEulerAngles = new Vector3(0, 0, xAxisDegree);
             properties.forceEnable = true;
-            //LogitechGSDK.LogiPlayConstantForce(0, 0);
-            LogitechGSDK.LogiPlayDamperForce(0, 40);
-
-        }
+            
+            LogitechGSDK.LogiPlayDamperForce(0, damperForce);
+            LogitechGSDK.LogiPlayConstantForce(0, constantForcee);
+            LogitechGSDK.LogiPlayBumpyRoadEffect(0, bumpyRoadEffect);
+            if (carAirborne) { LogitechGSDK.LogiPlayCarAirborne(0); }
+            LogitechGSDK.LogiPlayDirtRoadEffect(0, dirtRoadEffect);
+            LogitechGSDK.LogiPlayFrontalCollisionForce(0, frontalCollisionForce);
+            LogitechGSDK.LogiPlaySideCollisionForce(0, sideCollisionForce);
+            LogitechGSDK.LogiPlaySlipperyRoadEffect(0, slipperyRoadEffect);
+}
 
         
     }
