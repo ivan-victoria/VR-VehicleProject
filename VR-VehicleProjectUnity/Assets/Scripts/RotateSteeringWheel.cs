@@ -26,10 +26,10 @@ public class RotateSteeringWheel : MonoBehaviour
 
     void Update()
     {
-        if (LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(1))
+        if (LogitechGSDK.LogiUpdate() && LogitechGSDK.LogiIsConnected(0))
         {
             LogitechGSDK.DIJOYSTATE2ENGINES rec;
-            rec = LogitechGSDK.LogiGetStateUnity(1);
+            rec = LogitechGSDK.LogiGetStateUnity(0);
 
             xAxis = rec.lX;
             xAxisDegree = (xAxis / 364)*(-1);
@@ -43,6 +43,7 @@ public class RotateSteeringWheel : MonoBehaviour
             properties.forceEnable = true;
             
             LogitechGSDK.LogiPlayDamperForce(0, damperForce);
+            /*
             LogitechGSDK.LogiPlayConstantForce(0, constantForcee);
             LogitechGSDK.LogiPlayBumpyRoadEffect(0, bumpyRoadEffect);
             if (carAirborne) { LogitechGSDK.LogiPlayCarAirborne(0); }
@@ -50,6 +51,7 @@ public class RotateSteeringWheel : MonoBehaviour
             LogitechGSDK.LogiPlayFrontalCollisionForce(0, frontalCollisionForce);
             LogitechGSDK.LogiPlaySideCollisionForce(0, sideCollisionForce);
             LogitechGSDK.LogiPlaySlipperyRoadEffect(0, slipperyRoadEffect);
+            */
 }
 
         

@@ -20,7 +20,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 3
+    joyNum: 2
   - serializedVersion: 3
     m_Name: GasPedal
     descriptiveName: 
@@ -70,7 +70,7 @@ InputManager:
     axis: 2
     joyNum: 1
   - serializedVersion: 3
-    m_Name: SteeringWheel
+    m_Name: SteeringWheel2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: a
@@ -86,7 +86,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: GasPedal
+    m_Name: GasPedal2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: s

@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.vehiclesim.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\Hochschule Kahlsruhe\\Desktop\\VR_LAB_SS2019\\VR-VehicleProject\\VR-VehicleProjectUnity\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "VehicleSim [Testing]"
+        }
+      }
+    }
+  ]
+}
